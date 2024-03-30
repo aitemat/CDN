@@ -4,7 +4,7 @@
 
 <img src="/image/cdn.png">
 
-`CDN` được coi là xương sống trong suốt của Internet, có nhiệm vụ phân phối nội dung. Mỗi người trong chúng ta đều tương tác với nó hàng ngày. Chẳng hạn khi chúng ta đọc các bài báo trên các trang tin tức, mua sắm trực tuyến, xem video YouTube hoặc xem các trang mạng xã hội.
+`***CDN***` được coi là xương sống trong suốt của Internet, có nhiệm vụ phân phối nội dung. Mỗi người trong chúng ta đều tương tác với nó hàng ngày. Chẳng hạn khi chúng ta đọc các bài báo trên các trang tin tức, mua sắm trực tuyến, xem video YouTube hoặc xem các trang mạng xã hội.
 
 Bất kể bạn làm gì hoặc sử dụng loại nội dung nào, rất có thể bạn sẽ tìm thấy CDN đằng sau mọi ký tự văn bản, mọi image pixel và mọi frame phim được chuyển đến PC và trình duyệt trên thiết bị di động của bạn.
 
