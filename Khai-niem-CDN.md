@@ -22,6 +22,9 @@ Nội dung tĩnh: Vừa là nội dung ban đầu (input) tuy nhiên cũng là n
 Nội dung động (Dynamic content): Đúng như tên gọi, nội dung động trái ngược với định nghĩa nội dung tĩnh ta vừa tìm hiểu ở trên. Đó là nội dung sẽ thay đổi dựa vào dữ liệu đầu vào và được cá nhân hóa trên mỗi trang, dựa vào dữ liệu nhập của người dùng.
 Vậy CDN phân phối nộ dung hay cách hoạt động như thế nào. Cùng tìm hiểu trong phần dưới đây.  
 ### Cách thức hoạt động của CDN  
-Như đã đề cập ở trên, `CDN` hay ***Content Delivery Network*** hoạt động bằng cách đưa content đến gần vị trí người dùng cuối. Điều này được thực hiện bằng cách thông qua các data center được định vị được gọi là Points of Presence (PoPs). Đây là các data center nằm trên khắp thế giới và bên trong mỗi PoP là hàng nghìn caching server. Cả PoP và server đều giúp cải thiện kết nối và tăng tốc độ phân phối content đến end user.
+Như đã đề cập ở trên, `CDN` hay ***Content Delivery Network*** hoạt động bằng cách đưa content đến gần vị trí người dùng cuối. Điều này được thực hiện bằng cách thông qua các data center được định vị được gọi là Points of Presence (PoPs). Đây là các data center nằm trên khắp thế giới và bên trong mỗi PoP là hàng nghìn caching server. Cả PoP và server đều giúp cải thiện kết nối và tăng tốc độ phân phối content đến end user.  
+CDN hoạt động bằng cách lưu vào bộ nhớ đệm nội dung trang web của bạn, chẳng hạn như hình ảnh, trang HTML, tệp JavaScript, biểu định kiểu, video, v.v.  
+<img src="/image/cach-thuc-hoat-dong.png">  
+
 
 
