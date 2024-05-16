@@ -66,7 +66,7 @@ Bạn có thể thiết lập cron job để tự động đồng bộ hóa hàn
 
 ```sh
 crontab -e
-``
+```
 Thêm dòng sau vào file crontab:
 
 ```sh
