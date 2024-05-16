@@ -17,13 +17,13 @@ sudo yum install nginx
 Cấu hình Nginx:
 Tạo file cấu hình Nginx cho máy chủ CDN.
 
-bash
-Copy code
+```sh
 sudo nano /etc/nginx/conf.d/cdn.conf
+```
 Thêm cấu hình sau vào cdn.conf trên cả hai máy chủ:
 
 nginx
-Copy code
+```sh
 server {
     listen 80;
     server_name cdn.example.com;
@@ -35,42 +35,43 @@ server {
         add_header Cache-Control "public";
     }
 }
+```
 Tạo thư mục để lưu trữ nội dung CDN:
 
-bash
-Copy code
+```sh
 sudo mkdir -p /var/www/cdn
 sudo chown -R nginx:nginx /var/www/cdn
+```
 Khởi động và kích hoạt Nginx:
 
-bash
-Copy code
+```sh
 sudo systemctl start nginx
 sudo systemctl enable nginx
+```
 Bước 3: Đồng bộ hóa nội dung giữa các máy chủ
 Để đảm bảo nội dung được đồng bộ giữa hai location, bạn có thể sử dụng rsync hoặc một công cụ đồng bộ hóa khác. Dưới đây là ví dụ sử dụng rsync:
 
 Cài đặt rsync:
 
-bash
-Copy code
+```sh
 sudo yum install rsync
+```
 Thiết lập đồng bộ hóa:
 Trên máy chủ tại Mỹ, chạy lệnh sau để đồng bộ nội dung tới máy chủ tại Việt Nam:
 
-bash
-Copy code
+```sh
 rsync -avz /var/www/cdn/ user@vn.example.com:/var/www/cdn/
+```
 Bạn có thể thiết lập cron job để tự động đồng bộ hóa hàng ngày:
 
-bash
-Copy code
+```sh
 crontab -e
+``
 Thêm dòng sau vào file crontab:
 
-bash
-Copy code
+```sh
 0 2 * * * rsync -avz /var/www/cdn/ user@vn.example.com:/var/www/cdn/
+```
 Bước 4: Cấu hình DNS để phân phối tải
 Bạn cần cấu hình DNS để phân phối tải dựa trên vị trí địa lý của người dùng. Sử dụng một dịch vụ DNS có hỗ trợ GeoDNS như Amazon Route 53, NS1 hoặc một dịch vụ tương tự. Dưới đây là hướng dẫn cơ bản với Amazon Route 53:
 
