@@ -13,7 +13,7 @@ Trên cả hai máy chủ, cài đặt Nginx bằng các lệnh sau:
 ```sh
 sudo yum install epel-release  
 sudo yum install nginx
-```sh
+```
 Cấu hình Nginx:
 Tạo file cấu hình Nginx cho máy chủ CDN.
 
