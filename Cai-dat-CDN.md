@@ -81,7 +81,7 @@ Cấu hình các bản ghi GeoDNS:
 
 Tạo bản ghi A cho cdn.example.com trỏ đến IP của máy chủ tại Mỹ cho người dùng từ Mỹ.
 Tạo bản ghi A cho cdn.example.com trỏ đến IP của máy chủ tại Việt Nam cho người dùng từ Việt Nam.
-Bước 5: Kiểm tra và xác nhận
+## Bước 5: Kiểm tra và xác nhận
 Kiểm tra cấu hình Nginx:
 Truy cập http://cdn.example.com từ cả Mỹ và Việt Nam để đảm bảo rằng nội dung được phân phối từ các máy chủ tương ứng.
 
