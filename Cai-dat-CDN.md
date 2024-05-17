@@ -1,11 +1,10 @@
 Để cài đặt một CDN riêng cho hai location (Mỹ và Việt Nam) trên máy chủ CentOS 7 sử dụng Nginx, bạn cần thiết lập và cấu hình các máy chủ tại mỗi location và sử dụng Nginx để phân phối nội dung. Dưới đây là hướng dẫn từng bước để thiết lập một CDN riêng.
 
 ## Bước 1: Chuẩn bị máy chủ tại mỗi location
-Máy chủ tại Mỹ (us.example.com):
-
+### 1 . Máy chủ tại Mỹ (us.example.com):
 Cài đặt CentOS 7 và Nginx.
-Máy chủ tại Việt Nam (vn.example.com):
 
+### 2. Máy chủ tại Việt Nam (vn.example.com):
 Cài đặt CentOS 7 và Nginx.
 ## Bước 2: Cài đặt và cấu hình Nginx trên mỗi máy chủ
 Cài đặt Nginx:
@@ -48,7 +47,7 @@ Khởi động và kích hoạt Nginx:
 sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
-Bước 3: Đồng bộ hóa nội dung giữa các máy chủ
+## Bước 3: Đồng bộ hóa nội dung giữa các máy chủ
 Để đảm bảo nội dung được đồng bộ giữa hai location, bạn có thể sử dụng rsync hoặc một công cụ đồng bộ hóa khác. Dưới đây là ví dụ sử dụng rsync:
 
 Cài đặt rsync:
@@ -72,7 +71,7 @@ Thêm dòng sau vào file crontab:
 ```sh
 0 2 * * * rsync -avz /var/www/cdn/ user@vn.example.com:/var/www/cdn/
 ```
-Bước 4: Cấu hình DNS để phân phối tải
+## Bước 4: Cấu hình DNS để phân phối tải
 Bạn cần cấu hình DNS để phân phối tải dựa trên vị trí địa lý của người dùng. Sử dụng một dịch vụ DNS có hỗ trợ GeoDNS như Amazon Route 53, NS1 hoặc một dịch vụ tương tự. Dưới đây là hướng dẫn cơ bản với Amazon Route 53:
 
 Tạo các bản ghi DNS:
